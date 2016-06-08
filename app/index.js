@@ -12,7 +12,7 @@ var client = redis.createClient(
 app.get('/', function(req, res, next) {
   client.incr('visits', function(err, visits) {
     if(err) return next(err);
-    res.send('Viste esta página ' + visits + ' veces!');
+    res.send('Hey! Viste esta página ' + visits + ' veces!');
   });
 });
 
